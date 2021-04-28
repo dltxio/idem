@@ -1,5 +1,5 @@
 # idem-website
-Officail Website for idem.com.au
+Official Website for idem.com.au
 
 ## User Need: Establishing a digital identity that is transportable across exchanges.
 
