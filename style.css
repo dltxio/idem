@@ -447,9 +447,30 @@ input:-webkit-autofill:focus {
     margin-bottom: 0;
 }
 
+@media (min-width: 1200px) {
+    .progress-area .container {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1800px) {
+    .progress-area .container {
+        width: 1620px;
+    }
+}
+
+@media (max-width: 2500px) {
+    .progress-area {
+        background-image: none;
+    }
+    .progress-area .mobile-image {
+        margin-top: -90px !important;
+    }
+}
+
 .progress-area .mobile-image {
-    margin-top: -90px;
-    margin-bottom: -153px;
+    margin-top: auto;
+    margin-bottom: -72px;
 }
 
 /*-- 9. Video-Area --*/
