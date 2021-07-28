@@ -1,4 +1,5 @@
 import * as dotenv from "dotenv";
+import sites from "../sites.json";
 
 dotenv.config();
 
@@ -20,7 +21,8 @@ const getConfig = () => {
         `Your IDEM verification code is ${code}`
     },
     verificationCodeLength: 6,
-    ethKey: getEnvVariable("ETH_PRIVATE_KEY")
+    ethKey: getEnvVariable("ETH_PRIVATE_KEY"),
+    gpib: sites[0].api
   };
 
   return config;

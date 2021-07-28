@@ -12,6 +12,7 @@ import * as ImagePicker from "expo-image-picker";
 import * as DocumentPicker from "expo-document-picker";
 import * as Crypto from "expo-crypto";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import sites from "../../assets/sites.json";
 import * as FileSystem from "expo-file-system";
 import styless from "./Styless";
 
@@ -40,6 +41,25 @@ const Claim = () => {
       result.uri,
     ),
     base64Url: result.uri,
+  });
+
+  const parseVerifyValues = (email: any, phoneNumber: any) => ({
+    signature: "0x00",
+    timeStamp: new Date(),
+    claims: [
+      {
+        subject: {
+          type: "email",
+          value: email,
+        },
+      },
+      {
+        subject: {
+          type: "phoneNumber",
+          value: phoneNumber,
+        },
+      },
+    ],
   });
 
   const uploadFileFromBrowser = async () => {
@@ -122,7 +142,7 @@ const Claim = () => {
   };
   const rootStore = useRootStore();
   const claim = rootStore.Assets.selectedClaim;
-
+  const assetStore = rootStore.Assets;
   if (!claim) {
     return <View>{/* TODO: error handling for this case */}</View>;
   }
