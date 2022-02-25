@@ -7,6 +7,77 @@ Users who join a digital currency exchange must verify their identity through th
 
 Further delay is caused by the high rates of failure experienced by users. Licenses get rejected for having too much glare, edges of a document not being visible and a host of other glitches. For users who are accustomed to the instantaneousness of digital environments, these delays are frustrating. This problem becomes exacerbated when users wish to join more than one exchange and despite having had their identity verified by their initial exchange, must go through this process each time. For the majority of digital currency users who frequently shop around for the best rates, specific tokens and other features unique to each exchange, there is a need for a more streamlined and seamless  verification process.
 
+## Verifiable Credential
+
+```json
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://schema.org"
+  ],
+  "type": "VerifiablePresentation",
+  "verifiableCredential": [{
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+    ],
+    "type": ["VerifiableCredential", "NameCredential"],
+    "issuer": "https://idem.com.au/",
+    "issuanceDate": "2022-03-01T12:00:00Z",
+    "expirationDate": "2023-03-01T12:00:00Z",
+    "credentialSubject": {
+        "givenName": "Ralph",
+        "familyName": "Lavelle"
+      }
+    },
+    "proof": {
+      "type": "EcdsaSecp256k1Signature2019",
+      "created": "2022-03-01T12:00:00Z",
+      "proofPurpose": "assertionMethod",
+      "verificationMethod": "https://idem.com.au",
+      "jws": "eyJhbGciOiJSUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..TCYt5X
+        sITJX1CxPCT8yAV-TVkIEq_PbChOMqsLfRoPsnsgw5WEuts01mq-pQy7UJiN5mgRxD-WUc
+        X16dUEMGlv50aqzpqh4Qktb3rk-BuQy72IFLOqV0G_zS245-kronKb78cPN25DGlcTwLtj
+        PAYuNzVBAh4vGHSrQyHUdBBPM"
+    }
+  },
+  {
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+    ],
+    "type": ["VerifiableCredential", "EmailCredential"],
+    "issuer": "https://idem.com.au/",
+    "issuanceDate": "2022-03-01T12:00:00Z",
+    "expirationDate": "2023-03-01T12:00:00Z",
+    "credentialSubject": {
+        "email": "ralph.lavelle@dltx.io"
+      }
+    },
+    "proof": {
+      "type": "EcdsaSecp256k1Signature2019",
+      "created": "2022-03-01T12:00:00Z",
+      "proofPurpose": "assertionMethod",
+      "verificationMethod": "https://idem.com.au",
+      "jws": "eyJhbGciOiJSUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..TCYt5X
+        sITJX1CxPCT8yAV-TVkIEq_PbChOMqsLfRoPsnsgw5WEuts01mq-pQy7UJiN5mgRxD-WUc
+        X16dUEMGlv50aqzpqh4Qktb3rk-BuQy72IFLOqV0G_zS245-kronKb78cPN25DGlcTwLtj
+        PAYuNzVBAh4vGHSrQyHUdBBPM"
+    }
+  }],
+  "proof": {
+    "type": "EcdsaSecp256k1Signature2019",
+    "created": "2022-03-01T12:00:00Z",
+    "proofPurpose": "authentication",
+    "verificationMethod": "did:idem:ebfeb1f712ebc6f1c276e12ec21#keys-1",
+    "challenge": "8b5c66c0-bceb-40b4-b099-d31b127bf7b3",
+    "domain": "https://demo.idem.com.au",
+    "jws": "eyJhbGciOiJSUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..kTCYt5
+      XsITJX1CxPCT8yAV-TVIw5WEuts01mq-pQy7UJiN5mgREEMGlv50aqzpqh4Qq_PbChOMqs
+      LfRoPsnsgxD-WUcX16dUOqV0G_zS245-kronKb78cPktb3rk-BuQy72IFLN25DYuNzVBAh
+      4vGHSrQyHUGlcTwLtjPAnKb78"
+  }
+}
+```
+
 ## GPG Public Key
 
 http://keys.gnupg.net/pks/lookup?search=info%40idem.com.au&fingerprint=on&op=index
