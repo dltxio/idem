@@ -7,7 +7,7 @@ Users who join a digital currency exchange must verify their identity through th
 
 Further delay is caused by the high rates of failure experienced by users. Licenses get rejected for having too much glare, edges of a document not being visible and a host of other glitches. For users who are accustomed to the instantaneousness of digital environments, these delays are frustrating. This problem becomes exacerbated when users wish to join more than one exchange and despite having had their identity verified by their initial exchange, must go through this process each time. For the majority of digital currency users who frequently shop around for the best rates, specific tokens and other features unique to each exchange, there is a need for a more streamlined and seamless  verification process.
 
-## Verifiable Credential
+## Verifiable Presentation
 
 ```json
 {
