@@ -33,7 +33,7 @@ Further delay is caused by the high rates of failure experienced by users. Licen
       "type": "EcdsaSecp256k1Signature2019",
       "created": "2022-03-01T12:00:00Z",
       "proofPurpose": "assertionMethod",
-      "verificationMethod": "https://idem.com.au",
+      "verificationMethod": "https://idem.com.au/keys/0x645cD9fE9620649BF71a806bE803695B02f697Aa",
       "jws": "eyJhbGciOiJSUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..TCYt5X
         sITJX1CxPCT8yAV-TVkIEq_PbChOMqsLfRoPsnsgw5WEuts01mq-pQy7UJiN5mgRxD-WUc
         X16dUEMGlv50aqzpqh4Qktb3rk-BuQy72IFLOqV0G_zS245-kronKb78cPN25DGlcTwLtj
@@ -56,7 +56,7 @@ Further delay is caused by the high rates of failure experienced by users. Licen
       "type": "EcdsaSecp256k1Signature2019",
       "created": "2022-03-01T12:00:00Z",
       "proofPurpose": "assertionMethod",
-      "verificationMethod": "https://idem.com.au",
+      "verificationMethod": "https://idem.com.au/keys/0x645cD9fE9620649BF71a806bE803695B02f697Aa",
       "jws": "eyJhbGciOiJSUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..TCYt5X
         sITJX1CxPCT8yAV-TVkIEq_PbChOMqsLfRoPsnsgw5WEuts01mq-pQy7UJiN5mgRxD-WUc
         X16dUEMGlv50aqzpqh4Qktb3rk-BuQy72IFLOqV0G_zS245-kronKb78cPN25DGlcTwLtj
@@ -67,7 +67,7 @@ Further delay is caused by the high rates of failure experienced by users. Licen
     "type": "EcdsaSecp256k1Signature2019",
     "created": "2022-03-01T12:00:00Z",
     "proofPurpose": "authentication",
-    "verificationMethod": "did:idem:ebfeb1f712ebc6f1c276e12ec21#keys-1",
+    "verificationMethod": "did:idem:0x645cD9fE9620649BF71a806bE803695B02f697Aa#keys-1",
     "challenge": "8b5c66c0-bceb-40b4-b099-d31b127bf7b3",
     "domain": "https://demo.idem.com.au",
     "jws": "eyJhbGciOiJSUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..kTCYt5
