@@ -1,5 +1,6 @@
 # IDEM
-Official Website for https://idem.com.au
+
+ID for the web3 world.
 
 ## Introduction
 IDEM facilitates users to register on a customers website, such as a crytpo exchange without having the user to manually enter onboarding information such as email, password and personal meta data which we call claims.
