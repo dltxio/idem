@@ -1,81 +1,13 @@
-# idem-website
-Official Website for idem.com.au
+# IDEM
+Official Website for https://idem.com.au
 
-## User Need: Establishing a digital identity that is transportable across exchanges.
+## Introduction
+IDEM facilitates users to register on a customers website, such as a crytpo exchange without having the user to manually enter onboarding information such as email, password and personal meta data which we call claims.
 
-Users who join a digital currency exchange must verify their identity through the KYC process. Authentication ensures the supplied  identification details correspond with the specific user of the system. The process is time consuming, both in terms of the length of time it takes the user to photograph and upload the required documentation, and in terms of the waiting period for the exchange to then verify the data, which can take upto a week. 
+## Ethereum Public Key
 
-Further delay is caused by the high rates of failure experienced by users. Licenses get rejected for having too much glare, edges of a document not being visible and a host of other glitches. For users who are accustomed to the instantaneousness of digital environments, these delays are frustrating. This problem becomes exacerbated when users wish to join more than one exchange and despite having had their identity verified by their initial exchange, must go through this process each time. For the majority of digital currency users who frequently shop around for the best rates, specific tokens and other features unique to each exchange, there is a need for a more streamlined and seamless  verification process.
-
-## Verifiable Presentation
-
-```json
-{
-  "@context": [
-    "https://www.w3.org/2018/credentials/v1",
-    "https://schema.org"
-  ],
-  "type": "VerifiablePresentation",
-  "verifiableCredential": [{
-    "@context": [
-      "https://www.w3.org/2018/credentials/v1",
-    ],
-    "type": ["VerifiableCredential", "NameCredential"],
-    "issuer": "https://idem.com.au/",
-    "issuanceDate": "2022-03-01T12:00:00Z",
-    "expirationDate": "2023-03-01T12:00:00Z",
-    "credentialSubject": {
-        "givenName": "Ralph",
-        "familyName": "Lavelle"
-      }
-    },
-    "proof": {
-      "type": "EcdsaSecp256k1Signature2019",
-      "created": "2022-03-01T12:00:00Z",
-      "proofPurpose": "assertionMethod",
-      "verificationMethod": "https://idem.com.au/keys/0x645cD9fE9620649BF71a806bE803695B02f697Aa",
-      "jws": "eyJhbGciOiJSUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..TCYt5X
-        sITJX1CxPCT8yAV-TVkIEq_PbChOMqsLfRoPsnsgw5WEuts01mq-pQy7UJiN5mgRxD-WUc
-        X16dUEMGlv50aqzpqh4Qktb3rk-BuQy72IFLOqV0G_zS245-kronKb78cPN25DGlcTwLtj
-        PAYuNzVBAh4vGHSrQyHUdBBPM"
-    }
-  },
-  {
-    "@context": [
-      "https://www.w3.org/2018/credentials/v1",
-    ],
-    "type": ["VerifiableCredential", "EmailCredential"],
-    "issuer": "https://idem.com.au/",
-    "issuanceDate": "2022-03-01T12:00:00Z",
-    "expirationDate": "2023-03-01T12:00:00Z",
-    "credentialSubject": {
-        "email": "ralph.lavelle@dltx.io"
-      }
-    },
-    "proof": {
-      "type": "EcdsaSecp256k1Signature2019",
-      "created": "2022-03-01T12:00:00Z",
-      "proofPurpose": "assertionMethod",
-      "verificationMethod": "https://idem.com.au/keys/0x645cD9fE9620649BF71a806bE803695B02f697Aa",
-      "jws": "eyJhbGciOiJSUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..TCYt5X
-        sITJX1CxPCT8yAV-TVkIEq_PbChOMqsLfRoPsnsgw5WEuts01mq-pQy7UJiN5mgRxD-WUc
-        X16dUEMGlv50aqzpqh4Qktb3rk-BuQy72IFLOqV0G_zS245-kronKb78cPN25DGlcTwLtj
-        PAYuNzVBAh4vGHSrQyHUdBBPM"
-    }
-  }],
-  "proof": {
-    "type": "EcdsaSecp256k1Signature2019",
-    "created": "2022-03-01T12:00:00Z",
-    "proofPurpose": "authentication",
-    "verificationMethod": "did:idem:0x645cD9fE9620649BF71a806bE803695B02f697Aa#keys-1",
-    "challenge": "8b5c66c0-bceb-40b4-b099-d31b127bf7b3",
-    "domain": "https://demo.idem.com.au",
-    "jws": "eyJhbGciOiJSUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..kTCYt5
-      XsITJX1CxPCT8yAV-TVIw5WEuts01mq-pQy7UJiN5mgREEMGlv50aqzpqh4Qq_PbChOMqs
-      LfRoPsnsgxD-WUcX16dUOqV0G_zS245-kronKb78cPktb3rk-BuQy72IFLN25DYuNzVBAh
-      4vGHSrQyHUGlcTwLtjPAnKb78"
-  }
-}
+```
+0xE4ed9ceF6989CFE9da7c1Eec8c2299141dD9e7cC
 ```
 
 ## GPG Public Key
