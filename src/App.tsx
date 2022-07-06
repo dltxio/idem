@@ -12,6 +12,9 @@ export const App = () => {
         <img src={background} className="absolute top-0 left-0" />
         <div className="z-10 relative">
           <Navbar />
+          <div className="flex justify-center text-[#FFFFFF]">
+            Coming soon...
+          </div>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
