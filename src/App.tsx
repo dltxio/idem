@@ -1,13 +1,11 @@
-import React from "react";
 import { Navbar } from "./components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import background from "./assets/background.png";
-import CountDownTimer from "./CountdownTimer";
+import CountdownTimer from "./components/CountDownTimer";
 
 export const App = () => {
-
   return (
     <BrowserRouter>
       <div className="relative">
@@ -20,7 +18,7 @@ export const App = () => {
                 Coming soon...
               </div>
               <div className="flex justify-center text-center">
-                <CountDownTimer/>
+                <CountdownTimer />
               </div>
             </div>
           </div>
