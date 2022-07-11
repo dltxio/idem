@@ -14,8 +14,8 @@ export const App = () => {
           <div className="z-10 relative">
             <Navbar />
             <div className="mt-20">
-              <div className="flex-col justify-center text-[#FFFFFF] text-center mt-10 text-5xl">
-                <div className="flex justify-center text-[#FFFFFF] mt-5 text-2xl mb-10">
+              <div className="flex-col justify-center text-black text-center mt-10 text-5xl">
+                <div className="flex justify-center text-black mt-5 text-2xl mb-10">
                   Coming soon...
                 </div>
                 <div className="flex justify-center text-center">
