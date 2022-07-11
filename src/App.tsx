@@ -1,7 +1,6 @@
 import { Navbar } from "./components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About";
 import background from "./assets/background.png";
 import CountdownTimer from "./components/CountDownTimer";
 
