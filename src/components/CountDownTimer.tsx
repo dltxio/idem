@@ -7,7 +7,7 @@ const SECONDS_IN_DAY = 86400;
 
 const timerProps = {
   isPlaying: true,
-  size: 120,
+  size: 225,
   strokeWidth: 6
 };
 
@@ -43,7 +43,6 @@ const CountDownTimer = () => {
         colors="#FAEE6C"
         duration={daysDuration}
         initialRemainingTime={remainingTime}
-        size={225}
       >
         {({ elapsedTime, color }) => (
           <span style={{ color }}>
@@ -60,7 +59,6 @@ const CountDownTimer = () => {
           onComplete={(totalElapsedTime) => ({
             shouldRepeat: remainingTime - totalElapsedTime > SECONDS_IN_HOURS
           })}
-          size={225}
         >
           {({ elapsedTime, color }) => (
             <span style={{ color }}>
@@ -78,7 +76,6 @@ const CountDownTimer = () => {
           onComplete={(totalElapsedTime) => ({
             shouldRepeat: remainingTime - totalElapsedTime > SECONDS_IN_MINUTE
           })}
-          size={225}
         >
           {({ elapsedTime, color }) => (
             <span style={{ color }}>
@@ -99,7 +96,6 @@ const CountDownTimer = () => {
           onComplete={(totalElapsedTime) => ({
             shouldRepeat: remainingTime - totalElapsedTime > 0
           })}
-          size={225}
         >
           {({ elapsedTime, color }) => (
             <span style={{ color }}>
