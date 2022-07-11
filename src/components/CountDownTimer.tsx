@@ -20,18 +20,19 @@ const renderTime = (dimension: string, time: number) => {
   );
 };
 
-const getTimeSeconds = (time: number) => (SECONDS_IN_MINUTE - time) | 0;
+const getTimeSeconds = (time: number) => Math.floor(SECONDS_IN_MINUTE - time);
 const getTimeMinutes = (time: number) =>
-  ((time % SECONDS_IN_HOURS) / SECONDS_IN_MINUTE) | 0;
+  Math.floor((time % SECONDS_IN_HOURS) / SECONDS_IN_MINUTE);
 const getTimeHours = (time: number) =>
-  ((time % SECONDS_IN_DAY) / SECONDS_IN_HOURS) | 0;
-const getTimeDays = (time: number) => (time / SECONDS_IN_DAY) | 0;
+  Math.floor((time % SECONDS_IN_DAY) / SECONDS_IN_HOURS);
+const getTimeDays = (time: number) => Math.floor(time / SECONDS_IN_DAY);
 
-export default function CountDownTimer() {
-  const stratTime = Date.now() / 1000; // use UNIX timestamp in seconds
-  const endTime = stratTime + 243248; // use UNIX timestamp in seconds
+const CountDownTimer = () => {
+  const startTime = Date.now() / 1000; // use UNIX timestamp in seconds
+  const duration = 263248;
+  const endTime = startTime + duration; // use UNIX timestamp in seconds
 
-  const remainingTime = endTime - stratTime;
+  const remainingTime = endTime - startTime;
   const days = Math.ceil(remainingTime / SECONDS_IN_DAY);
   const daysDuration = days * SECONDS_IN_DAY;
 
@@ -109,4 +110,5 @@ export default function CountDownTimer() {
       </div>
     </div>
   );
-}
+};
+export default CountDownTimer;
