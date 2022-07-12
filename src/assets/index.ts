@@ -1,1 +1,1 @@
-export { ReactComponent as IdemLogo } from "./Idemlogo.svg";
+export { ReactComponent as IdemLogo } from "./IdemLogo.svg";
