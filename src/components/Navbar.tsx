@@ -1,10 +1,10 @@
-import { Logo } from "../assets";
+import { IdemLogo } from "../assets";
 
 const Navbar = () => {
   return (
     <>
       <div className="flex justify-center pt-10">
-        <Logo width="15%" height="15%" />
+        <IdemLogo width="15%" height="15%" />
       </div>
     </>
   );
