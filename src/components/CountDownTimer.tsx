@@ -1,17 +1,17 @@
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import "../styles.css";
 
-const minuteSeconds = 60;
-const hourSeconds = 3600;
-const daySeconds = 86400;
+const SECONDS_IN_MINUTE = 60;
+const SECONDS_IN_HOURS = 3600;
+const SECONDS_IN_DAY = 86400;
 
 const timerProps = {
   isPlaying: true,
-  size: 120,
+  size: 225,
   strokeWidth: 6
 };
 
-const renderTime = (dimension: any, time: number) => {
+const renderTime = (dimension: string, time: number) => {
   return (
     <div className="time-wrapper">
       <div className="time">{time}</div>
@@ -20,19 +20,21 @@ const renderTime = (dimension: any, time: number) => {
   );
 };
 
-const getTimeSeconds = (time: number) => (minuteSeconds - time) | 0;
+const getTimeSeconds = (time: number) => Math.floor(SECONDS_IN_MINUTE - time);
 const getTimeMinutes = (time: number) =>
-  ((time % hourSeconds) / minuteSeconds) | 0;
-const getTimeHours = (time: number) => ((time % daySeconds) / hourSeconds) | 0;
-const getTimeDays = (time: number) => (time / daySeconds) | 0;
+  Math.floor((time % SECONDS_IN_HOURS) / SECONDS_IN_MINUTE);
+const getTimeHours = (time: number) =>
+  Math.floor((time % SECONDS_IN_DAY) / SECONDS_IN_HOURS);
+const getTimeDays = (time: number) => Math.floor(time / SECONDS_IN_DAY);
 
-export default function CountDownTimer() {
-  const stratTime = Date.now() / 1000; // use UNIX timestamp in seconds
-  const endTime = stratTime + 243248; // use UNIX timestamp in seconds
+const CountDownTimer = () => {
+  const startTime = Date.now() / 1000; // use UNIX timestamp in seconds
+  const duration = 263248;
+  const endTime = startTime + duration; // use UNIX timestamp in seconds
 
-  const remainingTime = endTime - stratTime;
-  const days = Math.ceil(remainingTime / daySeconds);
-  const daysDuration = days * daySeconds;
+  const remainingTime = endTime - startTime;
+  const days = Math.ceil(remainingTime / SECONDS_IN_DAY);
+  const daysDuration = days * SECONDS_IN_DAY;
 
   return (
     <div className="App flex">
@@ -41,7 +43,6 @@ export default function CountDownTimer() {
         colors="#FAEE6C"
         duration={daysDuration}
         initialRemainingTime={remainingTime}
-        size={225}
       >
         {({ elapsedTime, color }) => (
           <span style={{ color }}>
@@ -53,16 +54,15 @@ export default function CountDownTimer() {
         <CountdownCircleTimer
           {...timerProps}
           colors="#FAEE6C"
-          duration={daySeconds}
-          initialRemainingTime={remainingTime % daySeconds}
+          duration={SECONDS_IN_DAY}
+          initialRemainingTime={remainingTime % SECONDS_IN_DAY}
           onComplete={(totalElapsedTime) => ({
-            shouldRepeat: remainingTime - totalElapsedTime > hourSeconds
+            shouldRepeat: remainingTime - totalElapsedTime > SECONDS_IN_HOURS
           })}
-          size={225}
         >
           {({ elapsedTime, color }) => (
             <span style={{ color }}>
-              {renderTime("hours", getTimeHours(daySeconds - elapsedTime))}
+              {renderTime("hours", getTimeHours(SECONDS_IN_DAY - elapsedTime))}
             </span>
           )}
         </CountdownCircleTimer>
@@ -71,16 +71,18 @@ export default function CountDownTimer() {
         <CountdownCircleTimer
           {...timerProps}
           colors="#FAEE6C"
-          duration={hourSeconds}
-          initialRemainingTime={remainingTime % hourSeconds}
+          duration={SECONDS_IN_HOURS}
+          initialRemainingTime={remainingTime % SECONDS_IN_HOURS}
           onComplete={(totalElapsedTime) => ({
-            shouldRepeat: remainingTime - totalElapsedTime > minuteSeconds
+            shouldRepeat: remainingTime - totalElapsedTime > SECONDS_IN_MINUTE
           })}
-          size={225}
         >
           {({ elapsedTime, color }) => (
             <span style={{ color }}>
-              {renderTime("minutes", getTimeMinutes(hourSeconds - elapsedTime))}
+              {renderTime(
+                "minutes",
+                getTimeMinutes(SECONDS_IN_HOURS - elapsedTime)
+              )}
             </span>
           )}
         </CountdownCircleTimer>
@@ -89,12 +91,11 @@ export default function CountDownTimer() {
         <CountdownCircleTimer
           {...timerProps}
           colors="#FAEE6C"
-          duration={minuteSeconds}
-          initialRemainingTime={remainingTime % minuteSeconds}
+          duration={SECONDS_IN_MINUTE}
+          initialRemainingTime={remainingTime % SECONDS_IN_MINUTE}
           onComplete={(totalElapsedTime) => ({
             shouldRepeat: remainingTime - totalElapsedTime > 0
           })}
-          size={225}
         >
           {({ elapsedTime, color }) => (
             <span style={{ color }}>
@@ -105,4 +106,5 @@ export default function CountDownTimer() {
       </div>
     </div>
   );
-}
+};
+export default CountDownTimer;
