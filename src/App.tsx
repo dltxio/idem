@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Background from "./assets/Background.svg";
-// import CountdownTimer from "./components/CountDownTimer";
 
 export const App = () => {
   return (
@@ -45,9 +44,7 @@ export const App = () => {
               <div className="flex justify-center text-white mt-5 text-xl mb-5 font-sans font-sm">
                 OUR WEBSITE IS COMING SOON
               </div>
-              <div className="flex justify-center text-center">
-                {/* <CountdownTimer /> */}
-              </div>
+              <div className="flex justify-center text-center"></div>
             </div>
           </div>
         </div>
