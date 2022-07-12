@@ -1,34 +1,58 @@
 import { Navbar } from "./components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import background from "./assets/background.png";
-import CountdownTimer from "./components/CountDownTimer";
+import About from "./pages/About";
+import Background from "./assets/Background.svg";
 
 export const App = () => {
   return (
     <BrowserRouter>
-      <div className="min-width: 1920px; margin: 0 auto; max-height: 1080px;">
-        <div className="relative">
-          <img src={background} className="absolute top-0 left-0" />
-          <div className="z-10 relative">
-            <Navbar />
-            <div className="mt-20">
-              <div className="flex-col justify-center text-black text-center mt-10 text-5xl">
-                <div className="flex justify-center text-black mt-5 text-2xl mb-10">
-                  Coming soon...
-                </div>
-                <div className="flex justify-center text-center">
-                  <CountdownTimer />
-                </div>
+      <div className="bg-cover">
+        <img
+          className="flex absolute h-full w-full min-w-full min-h-full bg-gradient-to-t from-black to-black"
+          src={Background}
+        />
+        <div className="flex-col relative justify-center">
+          <Navbar />
+          <div>
+            <div className="flex flex-wrap justify-center mt-20 items-end mb-10">
+              <div className="flex text-white text-5xl font-medium items-end">
+                The
+              </div>
+              <div className="flex text-[#ffd000] text-5xl ml-2 font-medium items-end">
+                Faster
+              </div>
+              <div className="flex text-white text-5xl items-end">,</div>
+              <div className="flex text-[#ffd000] text-5xl ml-2 font-medium items-end">
+                Easier
+              </div>
+              <div className="flex text-white text-3xl ml-2 items-end">
+                (And Economical) Way To Do
+              </div>
+              <div className="flex text-[#ffd000] text-5xl ml-2 font-medium items-end">
+                KYC
+              </div>
+              <div className="flex text-white text-3xl ml-2 items-end">
+                Compliance
               </div>
             </div>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              {/* <Route path="/about" element={<About />} /> */}
-            </Routes>
+            <div className="flex-row  text-center text-5xl mt-30">
+              <div className="flex text-white text-xl mb-10 w-20% justify-center">
+                Minimise the hassle of KYC compliance for your exchange and
+                users with an end-to-end digital identity verification platform.
+              </div>
+              <div className="flex justify-center text-white mt-5 text-xl mb-5 font-sans font-sm">
+                OUR WEBSITE IS COMING SOON
+              </div>
+              <div className="flex justify-center text-center"></div>
+            </div>
           </div>
         </div>
       </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </BrowserRouter>
   );
 };
