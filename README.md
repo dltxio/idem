@@ -1,21 +1,19 @@
-# IDEM
+# vite React TypeScript tailwindcss starter
+
+Template for vite, React + tailwindcss + TypeScript projects with some tools preconfigured.
+
+## About
 
 ID for the web3 world.
 
-## Introduction
+Introduction
 IDEM facilitates users to register on a customers website, such as a crytpo exchange without having the user to manually enter onboarding information such as email, password and personal meta data which we call claims.
 
-## Ethereum Public Key
-
-```
+Ethereum Public Key
 0x645cD9fE9620649BF71a806bE803695B02f697Aa
-```
-
-## GPG Public Key
-
+GPG Public Key
 http://keys.gnupg.net/pks/lookup?search=info%40idem.com.au&fingerprint=on&op=index
 
-```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGB6NOMBEADD20+hoUVg2kpYdMxUCnZ4p8QzrxUORL/zePclb4B7pi5KKA5Q
@@ -67,5 +65,34 @@ MDCow9+ZgzYNt0tIYgM4Awd8zRKjzvlwsU8pQVNUTog8AWSKZe0xXpDE7jCd/u5j
 Mv6KDXYdIOebmdtml7NpdxJCzdtppj+elTgSgPlpafO/A+JyLOFyIhLKCw7tBE0I
 vQtS90Vx
 =+be8
------END PGP PUBLIC KEY BLOCK-----  
+-----END PGP PUBLIC KEY BLOCK-----
+
+### Libraries
+
+- [Mocha](https://mochajs.org/)
+- [Chai](https://www.chaijs.com/)
+- [React](https://reactjs.org/)
+- [tailwindcss](https://tailwindcss.com/)
+  - [daisyUI](https://daisyui.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [vite](https://vitejs.dev/)
+
+### Tools
+
+- [commitlint](https://commitlint.js.org)
+- [Conventional Commits](https://www.conventionalcommits.org)
+- [editorconfig](https://editorconfig.org/)
+- [eslint](https://eslint.org/)
+- [husky](https://typicode.github.io/husky/#/)
+- [Prettier](https://prettier.io/)
+- [VS Code settings](https://code.visualstudio.com/)
+
+## Usage
+
+Create a new project from this template by clicking the "Use this template" button:
+
+```bash
+yarn
+yarn dev
+yarn test
 ```
