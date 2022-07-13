@@ -3,13 +3,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Background from "./assets/Background.svg";
+import RedeemCodeForm from "./components/form";
 
 export const App = () => {
   return (
     <BrowserRouter>
-      <div className="bg-cover">
+      <div>
         <img
-          className="flex absolute h-full w-full min-w-full min-h-full bg-gradient-to-t from-black to-black"
+          className="fixed bg-cover h-100% w-100% min-w-full min-h-full bg-gradient-to-b from-black to-black"
           src={Background}
         />
         <div className="flex-col relative justify-center">
@@ -45,6 +46,7 @@ export const App = () => {
                 OUR WEBSITE IS COMING SOON
               </div>
               <div className="flex justify-center text-center"></div>
+              <RedeemCodeForm />
             </div>
           </div>
         </div>
