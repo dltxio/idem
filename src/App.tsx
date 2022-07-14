@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Background from "./assets/Background.svg";
 import RedeemCodeForm from "./components/form";
+import Contents from "./components/Contents";
 
 export const App = () => {
   return (
@@ -44,6 +45,9 @@ export const App = () => {
               </div>
               <div className="flex justify-center text-white mt-5 text-xl mb-5 font-sans font-sm">
                 OUR WEBSITE IS COMING SOON
+              </div>
+              <div>
+                <Contents />
               </div>
               <div className="flex justify-center text-center"></div>
               <RedeemCodeForm />

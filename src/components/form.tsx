@@ -1,4 +1,25 @@
+import React, { useState } from "react";
+
 const RedeemCodeForm = () => {
+  const [userDetails, setUserDetails] = useState<string>();
+
+  const users = [];
+  const addUser = (ev) => {
+    ev.preventDefault();
+    const user = {
+      id: Date.now(),
+      firstName: document.getElementById("firstName").value,
+      lastName: document.getElementById("lastName").value,
+      email: document.getElementById("email").value
+    };
+    users.push(user);
+    document.forms[0].reset();
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("btn").addEventListener("submit", addUser);
+  });
+
   return (
     <>
       <div className="w-50 h-50 flex-col justify-center mt-10">
@@ -21,6 +42,7 @@ const RedeemCodeForm = () => {
                   type="text"
                   id="firstName"
                   placeholder="Write here..."
+                  onChange={(e) => setUserDetails(e.target.value)}
                 />
               </div>
             </label>
@@ -34,6 +56,7 @@ const RedeemCodeForm = () => {
                   type="text"
                   id="lastName"
                   placeholder="Write here..."
+                  onChange={(e) => setUserDetails(e.target.value)}
                 />
               </div>
             </label>
@@ -47,6 +70,7 @@ const RedeemCodeForm = () => {
                   type="text"
                   id="email"
                   placeholder="Write here..."
+                  onChange={(e) => setUserDetails(e.target.value)}
                 />
               </div>
             </label>
@@ -56,6 +80,7 @@ const RedeemCodeForm = () => {
               className="bg-[#ffd000] text-black text-sm rounded-3xl px-5 mt-5 mb-5"
               type="submit"
               value="Submit"
+              disabled={!userDetails}
             >
               Send
             </button>
