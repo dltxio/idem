@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import axios from "axios";
 
 const RedeemCodeForm = () => {
   const [userDetails, setUserDetails] = useState<string>();
 
-  const users = [];
+  const users: {
+    id: number;
+    firstName: string;
+    lastName: string;
+    email: string;
+  }[] = [];
   const addUser = (ev: SubmitEvent) => {
     ev.preventDefault();
     const user = {
@@ -18,6 +24,11 @@ const RedeemCodeForm = () => {
 
   document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("btn")!.addEventListener("submit", addUser);
+  });
+
+  axios.post(`"https://proxy.idem.com.au/"`, { users }).then((res) => {
+    console.log(res);
+    console.log(res.data);
   });
 
   return (
