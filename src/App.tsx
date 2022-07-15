@@ -3,7 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Background from "./assets/Background.svg";
+import RedeemCodeForm from "./components/form";
 
+export const App = () => {
+  return (
     <BrowserRouter>
       <div>
         <img
@@ -45,6 +48,7 @@ import Background from "./assets/Background.svg";
                 OUR WEBSITE IS COMING SOON
               </div>
               <div className="flex justify-center text-center"></div>
+              <RedeemCodeForm />
             </div>
           </div>
         </div>
