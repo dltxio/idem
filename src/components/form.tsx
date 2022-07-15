@@ -49,7 +49,7 @@ const RedeemCodeForm = () => {
               First Name
               <div>
                 <input
-                  className=" outline-[#ffd000] rounded-3xl text-white bg-black border-white border-2 ml-5 px-2 py-2 text-sm w-80"
+                  className=" outline-[#ffd000] rounded-3xl text-white bg-black border-white border-2 ml-5 mt-2 px-2 py-2 text-sm w-80"
                   type="text"
                   id="firstName"
                   placeholder="Write here..."
@@ -63,7 +63,7 @@ const RedeemCodeForm = () => {
               Last Name
               <div>
                 <input
-                  className="outline-[#ffd000] rounded-3xl text-white bg-black border-white border-2 ml-5 px-2 py-2 text-sm w-80"
+                  className="outline-[#ffd000] rounded-3xl text-white bg-black border-white mt-2 border-2 ml-5 px-2 py-2 text-sm w-80"
                   type="text"
                   id="lastName"
                   placeholder="Write here..."
@@ -77,7 +77,7 @@ const RedeemCodeForm = () => {
               Email
               <div>
                 <input
-                  className="outline-[#ffd000] rounded-3xl text-white bg-black border-white border-2 ml-5 px-2 py-2 text-sm w-80"
+                  className="outline-[#ffd000] rounded-3xl text-white bg-black border-white border-2 ml-5 mt-2 px-2 py-2 text-sm w-80"
                   type="text"
                   id="email"
                   placeholder="Write here..."
@@ -88,12 +88,12 @@ const RedeemCodeForm = () => {
           </div>
           <div>
             <button
-              className="bg-[#ffd000] text-black text-sm rounded-3xl px-5 mt-5 mb-5"
+              className="bg-[#ffd000] text-black text-sm rounded-3xl px-5 py-2 mb-10 hover:bg-[#ab8d09]"
               type="submit"
               value="Submit"
               disabled={!userDetails}
             >
-              Send
+              SEND
             </button>
           </div>
         </form>
