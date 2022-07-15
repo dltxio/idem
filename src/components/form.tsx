@@ -40,7 +40,7 @@ const RedeemCodeForm = () => {
           </div>
           <div>
             <label className="text-white text-xl">
-              Want to try IDEM? join our test group today!
+              Want to try IDEM? Join our test group today!
             </label>
           </div>
           <div>
