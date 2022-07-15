@@ -7,29 +7,31 @@ import Background from "./assets/Background.svg";
 export const App = () => {
   return (
     <BrowserRouter>
-      <div className="bg-cover">
+      <div>
         <img
-          className="flex absolute h-full w-full min-w-full min-h-full bg-gradient-to-t from-black to-black"
+          className="fixed bg-cover h-100% w-100% min-w-full min-h-full bg-gradient-to-b from-black to-black"
           src={Background}
         />
         <div className="flex-col relative justify-center">
           <Navbar />
           <div>
             <div className="flex flex-wrap justify-center mt-20 items-end mb-10">
-              <div className="flex text-white text-5xl font-medium items-end">
+              <div className="flex font-bold text-white text-5xl items-end">
                 The
               </div>
-              <div className="flex text-[#ffd000] text-5xl ml-2 font-medium items-end">
+              <div className="flex font-bold text-[#ffd000] text-5xl ml-2 items-end">
                 Faster
               </div>
-              <div className="flex text-white text-5xl items-end">,</div>
-              <div className="flex text-[#ffd000] text-5xl ml-2 font-medium items-end">
+              <div className="flex font-bold text-white text-5xl items-end">
+                ,
+              </div>
+              <div className="flex font-bold text-[#ffd000] text-5xl ml-2 items-end">
                 Easier
               </div>
               <div className="flex text-white text-3xl ml-2 items-end">
                 (And Economical) Way To Do
               </div>
-              <div className="flex text-[#ffd000] text-5xl ml-2 font-medium items-end">
+              <div className="flex text-[#ffd000] text-5xl ml-2 font-bold items-end">
                 KYC
               </div>
               <div className="flex text-white text-3xl ml-2 items-end">
@@ -41,7 +43,7 @@ export const App = () => {
                 Minimise the hassle of KYC compliance for your exchange and
                 users with an end-to-end digital identity verification platform.
               </div>
-              <div className="flex justify-center text-white mt-5 text-xl mb-5 font-sans font-sm">
+              <div className="flex justify-center text-white mt-5 text-xl mb-5 font-sans font-bold">
                 OUR WEBSITE IS COMING SOON
               </div>
               <div className="flex justify-center text-center"></div>
