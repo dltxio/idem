@@ -4,20 +4,20 @@ const RedeemCodeForm = () => {
   const [userDetails, setUserDetails] = useState<string>();
 
   const users = [];
-  const addUser = (ev) => {
+  const addUser = (ev: SubmitEvent) => {
     ev.preventDefault();
     const user = {
       id: Date.now(),
-      firstName: document.getElementById("firstName").value,
-      lastName: document.getElementById("lastName").value,
-      email: document.getElementById("email").value
+      firstName: document.getElementById("firstName")!.innerText,
+      lastName: document.getElementById("lastName")!.innerText,
+      email: document.getElementById("email")!.innerText
     };
     users.push(user);
     document.forms[0].reset();
   };
 
   document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("btn").addEventListener("submit", addUser);
+    document.getElementById("btn")!.addEventListener("submit", addUser);
   });
 
   return (
@@ -42,7 +42,7 @@ const RedeemCodeForm = () => {
                   type="text"
                   id="firstName"
                   placeholder="Write here..."
-                  onChange={(e) => setUserDetails(e.target.value)}
+                  onChange={(e) => setUserDetails(e.target.innerText)}
                 />
               </div>
             </label>
@@ -56,7 +56,7 @@ const RedeemCodeForm = () => {
                   type="text"
                   id="lastName"
                   placeholder="Write here..."
-                  onChange={(e) => setUserDetails(e.target.value)}
+                  onChange={(e) => setUserDetails(e.target.innerText)}
                 />
               </div>
             </label>
@@ -70,7 +70,7 @@ const RedeemCodeForm = () => {
                   type="text"
                   id="email"
                   placeholder="Write here..."
-                  onChange={(e) => setUserDetails(e.target.value)}
+                  onChange={(e) => setUserDetails(e.target.innerText)}
                 />
               </div>
             </label>
