@@ -19,7 +19,7 @@ const RedeemCodeForm = () => {
           "We have submitted your request. Please check your email for a confirmation."
         );
       })
-      .catch((err) => {
+      .catch(() => {
         alert("ERROR, please try again");
       });
   };
