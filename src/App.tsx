@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Background from "./assets/Background.svg";
-import RedeemCodeForm from "./components/form";
 
 export const App = () => {
   return (
@@ -17,20 +16,22 @@ export const App = () => {
           <Navbar />
           <div>
             <div className="flex flex-wrap justify-center mt-20 items-end mb-10">
-              <div className="flex text-white text-5xl font-medium items-end">
+              <div className="flex font-bold text-white text-5xl items-end">
                 The
               </div>
-              <div className="flex text-[#ffd000] text-5xl ml-2 font-medium items-end">
+              <div className="flex font-bold text-[#ffd000] text-5xl ml-2 items-end">
                 Faster
               </div>
-              <div className="flex text-white text-5xl items-end">,</div>
-              <div className="flex text-[#ffd000] text-5xl ml-2 font-medium items-end">
+              <div className="flex font-bold text-white text-5xl items-end">
+                ,
+              </div>
+              <div className="flex font-bold text-[#ffd000] text-5xl ml-2 items-end">
                 Easier
               </div>
               <div className="flex text-white text-3xl ml-2 items-end">
                 (And Economical) Way To Do
               </div>
-              <div className="flex text-[#ffd000] text-5xl ml-2 font-medium items-end">
+              <div className="flex text-[#ffd000] text-5xl ml-2 font-bold items-end">
                 KYC
               </div>
               <div className="flex text-white text-3xl ml-2 items-end">
@@ -42,11 +43,10 @@ export const App = () => {
                 Minimise the hassle of KYC compliance for your exchange and
                 users with an end-to-end digital identity verification platform.
               </div>
-              <div className="flex justify-center text-white mt-5 text-xl mb-5 font-sans font-sm">
+              <div className="flex justify-center text-white mt-5 text-xl mb-5 font-sans font-bold">
                 OUR WEBSITE IS COMING SOON
               </div>
               <div className="flex justify-center text-center"></div>
-              <RedeemCodeForm />
             </div>
           </div>
         </div>
