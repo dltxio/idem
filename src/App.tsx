@@ -45,7 +45,7 @@ export const App = () => {
                 users with an end-to-end digital identity verification platform.
               </div>
               <div className="flex justify-center text-white mt-5 text-xl mb-5 font-sans font-bold">
-                OUR WEBSITE IS COMING SOON
+                COMING SOON
               </div>
               <div className="flex justify-center text-center"></div>
               <RedeemCodeForm />

@@ -33,7 +33,7 @@ const RedeemCodeForm = () => {
     <>
       <div className="w-50 h-50 flex-col justify-center mt-10">
         <div>
-          <label className="text-[#ffd000] text-5xl pt-50">Contact</label>
+          <label className="text-[#ffd000] text-5xl pt-50">IDEM</label>
         </div>
         <div>
           <label className="text-white text-xl">
@@ -48,7 +48,7 @@ const RedeemCodeForm = () => {
             <div>
               <input
                 className=" outline-[#ffd000] rounded-3xl text-white bg-black border-white border-2 ml-5 mt-2 px-2 py-2 text-sm w-80"
-                placeholder="Write here..."
+                placeholder="First Name"
                 {...register("firstName")}
               />
             </div>
@@ -60,7 +60,7 @@ const RedeemCodeForm = () => {
             </label>
             <div>
               <input
-                placeholder="Write here..."
+                placeholder="Last Name"
                 className="outline-[#ffd000] rounded-3xl text-white bg-black border-white mt-2 border-2 ml-5 px-2 py-2 text-sm w-80"
                 {...register("lastName")}
               />
@@ -72,7 +72,7 @@ const RedeemCodeForm = () => {
             </label>
             <div>
               <input
-                placeholder="Write here..."
+                placeholder="Email"
                 className="outline-[#ffd000] rounded-3xl text-white bg-black border-white border-2 ml-5 mt-2 px-2 py-2 text-sm w-80"
                 type="email"
                 {...register("email")}
