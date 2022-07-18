@@ -19,7 +19,7 @@ const RedeemCodeForm = () => {
         console.log(res.data);
         if (res.status === 200) {
           alert(
-            "We have submitted your request. Please check your email for a confirmation."
+            "We have submitted your request. Please check your email for a redeem code."
           );
         }
       })
