@@ -10,8 +10,9 @@ type Inputs = {
 const RedeemCodeForm = () => {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
+    console.log(data);
     axios
-      .post(`http://localhost:3001/user/tester`, data, {
+      .post(`http://localhost:3001/user/tester`, JSON.stringify(data), {
         headers: { "Content-Type": "application/json" }
       })
       .then((res) => {
