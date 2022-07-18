@@ -11,13 +11,17 @@ const RedeemCodeForm = () => {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     axios
-      .post(`https://proxy.idem.com.au/registerTester`, { data })
+      .post(`http://localhost:3001/user/tester`, data, {
+        headers: { "Content-Type": "application/json" }
+      })
       .then((res) => {
         console.log(res);
         console.log(res.data);
-        alert(
-          "We have submitted your request. Please check your email for a confirmation."
-        );
+        if (res.status === 200) {
+          alert(
+            "We have submitted your request. Please check your email for a confirmation."
+          );
+        }
       })
       .catch(() => {
         alert("ERROR, please try again");
