@@ -12,13 +12,17 @@ const RedeemCodeForm = () => {
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     console.log(data);
     axios
-      .post(`http://localhost:3001/user/tester`, JSON.stringify(data), {
-        headers: { "Content-Type": "application/json" }
-      })
+      .post(
+        `${import.meta.env.VITE_APP_PROXY_URL}user/tester`,
+        JSON.stringify(data),
+        {
+          headers: { "Content-Type": "application/json" }
+        }
+      )
       .then((res) => {
         console.log(res);
         console.log(res.data);
-        if (res.status === 200) {
+        if (res.status === 201) {
           alert(
             "We have submitted your request. Please check your email for a redeem code."
           );
