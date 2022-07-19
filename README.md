@@ -14,6 +14,7 @@ Ethereum Public Key
 GPG Public Key
 http://keys.gnupg.net/pks/lookup?search=info%40idem.com.au&fingerprint=on&op=index
 
+```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGB6NOMBEADD20+hoUVg2kpYdMxUCnZ4p8QzrxUORL/zePclb4B7pi5KKA5Q
@@ -66,6 +67,7 @@ Mv6KDXYdIOebmdtml7NpdxJCzdtppj+elTgSgPlpafO/A+JyLOFyIhLKCw7tBE0I
 vQtS90Vx
 =+be8
 -----END PGP PUBLIC KEY BLOCK-----
+```
 
 ### Libraries
 
