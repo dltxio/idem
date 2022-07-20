@@ -11,8 +11,9 @@ export const App = () => {
         className="fixed bg-cover	bg-black w-full h-full bg-gradient-to-b from-black to-black"
         style={{ backgroundImage: `url(${Background})` }}
       ></div>
-      <div className="flex-col relative justify-center">
+      <div className="flex-col relative justify-center min-w-500">
         <Navbar />
+        <div />
         <div>
           <div className="flex flex-wrap justify-center mt-20 items-end mb-10">
             <div className="flex font-bold text-white text-5xl items-end">
