@@ -9,7 +9,7 @@ export const App = () => {
     <BrowserRouter>
       <div>
         <img
-          className="fixed bg-cover h-100% w-100% min-w-full min-h-full bg-gradient-to-b from-black to-black"
+          className="fixed bg-cover bg-blend-multiply	bg-black	h-100% w-100% min-w-full min-h-full bg-gradient-to-b from-black to-black"
           src={Background}
         />
         <div className="flex-col relative justify-center">
