@@ -47,7 +47,9 @@ export const App = () => {
             <div className="flex justify-center text-white mt-5 text-xl mb-5 font-sans font-bold">
               COMING SOON
             </div>
-            <div className="flex justify-center text-center"></div>
+            <div className="flex justify-center text-center">
+              <RedeemCodeForm />
+            </div>
           </div>
         </div>
       </div>
