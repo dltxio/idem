@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Background from "./assets/Background.svg";
+import RedeemCodeForm from "./components/form";
 
 export const App = () => {
   return (
@@ -46,7 +47,9 @@ export const App = () => {
             <div className="flex justify-center text-white mt-5 text-xl mb-5 font-sans font-bold">
               COMING SOON
             </div>
-            <div className="flex justify-center text-center"></div>
+            <div className="flex justify-center text-center">
+              <RedeemCodeForm />
+            </div>
           </div>
         </div>
       </div>

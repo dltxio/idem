@@ -22,7 +22,7 @@ const RedeemCodeForm = () => {
       .then((res) => {
         console.log(res);
         console.log(res.data);
-        if (res.status === 200) {
+        if (res.status === 201) {
           alert(
             "We have submitted your request. Please check your email for a redeem code."
           );
