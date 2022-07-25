@@ -76,7 +76,7 @@ const RedeemCodeForm = () => {
             </label>
             <div>
               <input
-                placeholder="Email"
+                placeholder="Apple ID Email"
                 className="outline-[#ffd000] rounded-3xl text-white bg-black border-white border-2 ml-5 mt-2 px-2 py-2 text-sm w-80"
                 type="email"
                 {...register("email")}
