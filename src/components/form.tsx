@@ -34,60 +34,61 @@ const RedeemCodeForm = () => {
   };
 
   return (
-    <>
-      <div className="w-50 h-50 flex-col justify-center mt-10">
-        <label className="text-[#ffd000] text-5xl pt-50">IDEM</label>
-        <div>
-          <label className="text-white text-xl">
-            Want to try IDEM? Join our test group today!
-          </label>
-        </div>
-        <form onSubmit={handleSubmit(onSubmit)} className="flex-col">
-          <div>
-            <label htmlFor="firstName" className="text-white text-xl">
-              First Name
-            </label>
-            <div>
-              <input
-                className=" outline-[#ffd000] rounded-3xl text-white bg-black border-white border-2 ml-5 mt-2 p-2 text-sm w-80"
-                placeholder="First Name"
-                {...register("firstName")}
-              />
-            </div>
-          </div>
+    <div className="w-2/5 flex flex-col items-center mt-10">
+      <h1 className="text-[#ffd000] text-5xl pt-50 w-full">IDEM</h1>
+      <h2 className="text-white text-xl w-full mt-2">
+        Want to try IDEM? Join our test group today!
+      </h2>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="w-full flex flex-col items-center mt-5"
+      >
+        <label
+          htmlFor="firstName"
+          className="text-white text-xl w-full text-center"
+        >
+          First Name
+        </label>
 
-          <div>
-            <label htmlFor="lastName" className="text-white text-xl">
-              Last Name
-            </label>
-            <div>
-              <input
-                placeholder="Last Name"
-                className="outline-[#ffd000] rounded-3xl text-white bg-black border-white mt-2 border-2 ml-5 p-2 text-sm w-80"
-                {...register("lastName")}
-              />
-            </div>
-          </div>
-          <div>
-            <label htmlFor="email" className="text-white text-xl mr-8">
-              Email
-            </label>
-            <div>
-              <input
-                placeholder="Apple ID Email"
-                className="outline-[#ffd000] rounded-3xl text-white bg-black border-white border-2 ml-5 mt-2 p-2 text-sm w-80"
-                type="email"
-                {...register("email")}
-              />
-            </div>
-          </div>
-          <input
-            type="submit"
-            className="bg-[#ffd000] text-black text-sm rounded-3xl px-5 py-2 mb-10 hover:bg-[#ab8d09]"
-          />
-        </form>
-      </div>
-    </>
+        <input
+          className="outline-[#ffd000] w-full block rounded-3xl text-white bg-black border-white border-2 mt-2 p-2 text-sm"
+          placeholder="First Name"
+          {...register("firstName")}
+        />
+
+        <label
+          htmlFor="lastName"
+          className="text-white text-xl w-full text-center mt-4"
+        >
+          Last Name
+        </label>
+
+        <input
+          placeholder="Last Name"
+          className="outline-[#ffd000] w-full rounded-3xl block text-white bg-black border-white mt-2 border-2 p-2 text-sm"
+          {...register("lastName")}
+        />
+
+        <label
+          htmlFor="email"
+          className="text-white text-xl w-full text-center mt-4"
+        >
+          Email
+        </label>
+
+        <input
+          placeholder="Apple ID Email"
+          className="outline-[#ffd000] w-full rounded-3xl block text-white bg-black border-white border-2 mt-2 p-2 text-sm"
+          type="email"
+          {...register("email")}
+        />
+
+        <input
+          type="submit"
+          className="bg-[#ffd000] text-black text-sm rounded-3xl px-5 py-2 my-10 hover:bg-[#ab8d09]"
+        />
+      </form>
+    </div>
   );
 };
 export default RedeemCodeForm;
