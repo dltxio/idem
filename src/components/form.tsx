@@ -36,9 +36,7 @@ const RedeemCodeForm = () => {
   return (
     <>
       <div className="w-50 h-50 flex-col justify-center mt-10">
-        <div>
-          <label className="text-[#ffd000] text-5xl pt-50">IDEM</label>
-        </div>
+        <label className="text-[#ffd000] text-5xl pt-50">IDEM</label>
         <div>
           <label className="text-white text-xl">
             Want to try IDEM? Join our test group today!
@@ -51,7 +49,7 @@ const RedeemCodeForm = () => {
             </label>
             <div>
               <input
-                className=" outline-[#ffd000] rounded-3xl text-white bg-black border-white border-2 ml-5 mt-2 px-2 py-2 text-sm w-80"
+                className=" outline-[#ffd000] rounded-3xl text-white bg-black border-white border-2 ml-5 mt-2 p-2 text-sm w-80"
                 placeholder="First Name"
                 {...register("firstName")}
               />
@@ -65,7 +63,7 @@ const RedeemCodeForm = () => {
             <div>
               <input
                 placeholder="Last Name"
-                className="outline-[#ffd000] rounded-3xl text-white bg-black border-white mt-2 border-2 ml-5 px-2 py-2 text-sm w-80"
+                className="outline-[#ffd000] rounded-3xl text-white bg-black border-white mt-2 border-2 ml-5 p-2 text-sm w-80"
                 {...register("lastName")}
               />
             </div>
@@ -77,7 +75,7 @@ const RedeemCodeForm = () => {
             <div>
               <input
                 placeholder="Apple ID Email"
-                className="outline-[#ffd000] rounded-3xl text-white bg-black border-white border-2 ml-5 mt-2 px-2 py-2 text-sm w-80"
+                className="outline-[#ffd000] rounded-3xl text-white bg-black border-white border-2 ml-5 mt-2 p-2 text-sm w-80"
                 type="email"
                 {...register("email")}
               />
