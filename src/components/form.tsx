@@ -42,6 +42,7 @@ const RedeemCodeForm = () => {
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="w-full flex flex-col items-center mt-5"
+        autoComplete="off"
       >
         <label
           htmlFor="firstName"
