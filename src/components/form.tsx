@@ -44,7 +44,11 @@ const RedeemCodeForm = () => {
             Want to try IDEM? Join our test group today!
           </label>
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className="flex-col">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex-col"
+          autoComplete="off"
+        >
           <div>
             <label htmlFor="firstName" className="text-white text-xl">
               First Name
