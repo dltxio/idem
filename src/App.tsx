@@ -44,9 +44,7 @@ export const App = () => {
               Minimise the hassle of KYC compliance for your exchange and users
               with an end-to-end digital identity verification platform.
             </div>
-            <div className="flex justify-center text-white mt-5 text-xl mb-5 font-sans font-bold">
-              COMING SOON
-            </div>
+
             <div className="flex justify-center text-center">
               <RedeemCodeForm />
             </div>
