@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Background from "./assets/Background.svg";
+import testGroupQRCode from "./assets/testGroupQRCode.png";
+import IdemVideo from "./components/idemVideo";
 
 export const App = () => {
   return (
@@ -44,8 +46,19 @@ export const App = () => {
               with an end-to-end digital identity verification platform.
             </div>
 
-            <div className="flex justify-center text-center">
-              Test via TestFlight https://testflight.apple.com/join/AcjgLO8G
+            <div className="flex text-white text-xl mb-10 w-20% justify-center">
+              Join our test group via TestFlight today!
+            </div>
+            <div className="flex justify-center text-center pb-10">
+              <img
+                src={testGroupQRCode}
+                alt="qrCode"
+                width={350}
+                height={320}
+              />
+              <div className="px-10">
+                <IdemVideo />
+              </div>
             </div>
           </div>
         </div>
