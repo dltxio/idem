@@ -47,7 +47,7 @@ export const App = () => {
             </div>
 
             <div className="flex text-white text-xl mb-10 w-20% justify-center">
-              Join our test group via TestFlight today!
+              Join our test group via TestFlight today.
             </div>
             <div className="flex justify-center text-center pb-10">
               <img
