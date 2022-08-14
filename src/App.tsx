@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Background from "./assets/Background.svg";
 import testGroupQRCode from "./assets/testGroupQRCode.png";
-import IdemVideo from "./components/idemVideo";
+import IdemVideo from "./components/IdemPromoVideo";
 
 export const App = () => {
   return (
