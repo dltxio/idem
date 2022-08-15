@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Background from "./assets/Background.svg";
 import testGroupQRCode from "./assets/testGroupQRCode.png";
 import IdemVideo from "./components/idemVideo";
+import Form from "./components/Form";
 
 export const App = () => {
   return (
@@ -59,6 +60,9 @@ export const App = () => {
               <div className="px-10">
                 <IdemVideo />
               </div>
+            </div>
+            <div className="flex justify-center text-center pb-10">
+              <Form />
             </div>
           </div>
         </div>
