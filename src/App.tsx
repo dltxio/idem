@@ -46,6 +46,16 @@ export const App = () => {
               Minimise the hassle of KYC compliance for your exchange and users
               with an end-to-end digital identity verification platform.
             </div>
+            <div className="flex text-white text-xl mb-10 w-20% justify-center">
+              IDEM is a fully open source application shipped under MIT licence.
+              Feel free to raise an issue on
+              <a
+                className="flex text-[#ffd000] text-xl mb-10 w-20% justify-center px-1"
+                href="https://github.com/dltxio/idem-mobile"
+              >
+                GitHub.
+              </a>
+            </div>
 
             <div className="flex text-white text-xl mb-10 w-20% justify-center">
               Join our test group via
