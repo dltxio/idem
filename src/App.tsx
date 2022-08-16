@@ -79,7 +79,7 @@ export const App = () => {
                 GitHub.
               </a>
               <div className="flex text-white text-xl mb-10 w-20% justify-center">
-                Or conact support below.
+                Or contact support below.
               </div>
             </div>
 
