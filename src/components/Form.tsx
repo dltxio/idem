@@ -7,7 +7,6 @@ const ContactLink = () => {
       </h2>
       <a
         className=" flex bg-[#ffd000] text-black md:text-base text-center rounded-3xl my-10 py-5 px-20 hover:bg-[#ab8d09]"
-        target="_blank"
         href="mailto:support@dltx.io"
       >
         Contact Support
