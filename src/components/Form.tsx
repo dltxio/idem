@@ -1,4 +1,4 @@
-const RedeemCodeForm = () => {
+const ContactLink = () => {
   return (
     <div className="w-2/5 flex flex-col items-center mt-10">
       <h1 className="text-[#ffd000] text-5xl pt-50 w-full">Support</h1>
@@ -15,4 +15,4 @@ const RedeemCodeForm = () => {
     </div>
   );
 };
-export default RedeemCodeForm;
+export default ContactLink;
