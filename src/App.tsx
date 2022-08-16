@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Background from "./assets/Background.svg";
 import testGroupQRCode from "./assets/testGroupQRCode.png";
 import IdemVideo from "./components/IdemPromoVideo";
+import ContactLink from "./components/Form";
 
 export const App = () => {
   return (
@@ -46,17 +47,6 @@ export const App = () => {
               with an end-to-end digital identity verification platform.
             </div>
             <div className="flex text-white text-xl mb-10 w-20% justify-center">
-              IDEM is a fully open source application shipped under MIT licence.
-              Feel free to raise an issue on
-              <a
-                className="flex text-[#ffd000] text-xl mb-10 w-20% justify-center px-1"
-                href="https://github.com/dltxio/idem-mobile"
-              >
-                GitHub.
-              </a>
-            </div>
-
-            <div className="flex text-white text-xl mb-10 w-20% justify-center">
               Join our test group via
               <a
                 className="flex text-[#ffd000] text-xl mb-10 w-20% justify-center px-1"
@@ -78,6 +68,23 @@ export const App = () => {
               <div className="px-10">
                 <IdemVideo />
               </div>
+            </div>
+            <div className="flex text-white text-xl mb-10 w-20% justify-center">
+              IDEM is a fully open source application shipped under MIT licence.
+              Feel free to raise an issue on
+              <a
+                className="flex text-[#ffd000] text-xl mb-10 w-20% justify-center px-1"
+                href="https://github.com/dltxio/idem-mobile"
+              >
+                GitHub.
+              </a>
+              <div className="flex text-white text-xl mb-10 w-20% justify-center">
+                Or contact support below.
+              </div>
+            </div>
+
+            <div className="flex justify-center text-center pb-10">
+              <ContactLink />
             </div>
           </div>
         </div>
