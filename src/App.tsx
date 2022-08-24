@@ -11,7 +11,8 @@ export const App = () => {
   return (
     <BrowserRouter>
       <div
-        className="fixed bg-cover	bg-black w-full h-full bg-gradient-to-b from-black to-black brightness-50	"
+        className="fixed bg-cover	bg-black w-full h-full bg-gradient-to-b from-black to-black brightness-[0.2]
+	"
         style={{ backgroundImage: `url(${Background})` }}
       />
       <div className=" relative justify-center min-w-500">
