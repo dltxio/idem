@@ -2,7 +2,7 @@ import { Navbar } from "./components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Background from "./assets/Background.svg";
+import Background from "./assets/Background.jpg";
 import testGroupQRCode from "./assets/testGroupQRCode.png";
 import IdemVideo from "./components/IdemPromoVideo";
 import ContactLink from "./components/Form";
@@ -11,7 +11,7 @@ export const App = () => {
   return (
     <BrowserRouter>
       <div
-        className="fixed bg-cover	bg-black w-full h-full bg-gradient-to-b from-black to-black"
+        className="fixed bg-cover	bg-black w-full h-full bg-gradient-to-b from-black to-black brightness-50	"
         style={{ backgroundImage: `url(${Background})` }}
       />
       <div className=" relative justify-center min-w-500">
