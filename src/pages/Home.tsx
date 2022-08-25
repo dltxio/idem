@@ -4,8 +4,8 @@ import {
   IdemPromoVideo as IdemVideo
 } from "../components";
 
-import Background from "./assets/Background.jpg";
-import testGroupQRCode from "./assets/testGroupQRCode.png";
+import Background from "../assets/Background.jpg";
+import testGroupQRCode from "../assets/testGroupQRCode.png";
 
 const Home = () => {
   return (
