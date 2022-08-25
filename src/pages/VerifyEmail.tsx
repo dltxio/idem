@@ -6,6 +6,7 @@ const VerifyEmail = () => {
   const { search } = useLocation();
   const [isVerifying, setIsVerifying] = useState(true);
   const [result, setResult] = useState(null);
+  const [error, setError] = useState(null);
   const query = useMemo(() => new URLSearchParams(search), [search]);
   const token = query.get("token");
   useEffect(() => {
@@ -13,6 +14,10 @@ const VerifyEmail = () => {
       .post("https://uat-proxy.idem.com.au/api/verifyEmail", { token })
       .then((result) => {
         setResult(result.data);
+        setIsVerifying(false);
+      })
+      .catch((error) => {
+        setError(error);
         setIsVerifying(false);
       });
   }, []);
@@ -24,6 +29,7 @@ const VerifyEmail = () => {
       <div>Status</div>
       {isVerifying && <div>Verifying...</div>}
       {result && <div>Result : {JSON.stringify(result)} </div>}
+      {error && <div>Error : {JSON.stringify(error)} </div>}
     </div>
   );
 };
