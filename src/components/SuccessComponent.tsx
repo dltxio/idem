@@ -1,4 +1,3 @@
-import Navbar from "./Navbar";
 
 const SuccessComponent = () => {
   return (
