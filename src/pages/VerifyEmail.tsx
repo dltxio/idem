@@ -1,30 +1,34 @@
-import axios from "axios";
 import { useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Background from "../assets/Background.jpg";
 import { Navbar } from "../components";
 import ErrorComponent from "../components/ErrorComponent";
 import SuccessComponent from "../components/SuccessComponent";
+import { useApi } from "../hooks";
 
 const VerifyEmail = () => {
   const { search } = useLocation();
   const [isVerifying, setIsVerifying] = useState(true);
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState(false);
   const [error, setError] = useState(null);
   const query = useMemo(() => new URLSearchParams(search), [search]);
   const token = query.get("token");
+  const api = useApi();
+
   useEffect(() => {
-    axios
-      .post("https://uat-proxy.idem.com.au/api/verifyEmail", { token })
+    if (!token) return;
+    api
+      .verifyEmail(token)
       .then((result) => {
-        setResult(result.data);
+        console.log(result);
+        setResult(result);
         setIsVerifying(false);
       })
       .catch((error) => {
         setError(error);
         setIsVerifying(false);
       });
-  }, []);
+  }, [token]);
   return (
     <>
       <div
@@ -42,7 +46,7 @@ const VerifyEmail = () => {
             </div>
           )}
           <div className=" flex flex-row justify-center text-2xl">
-            {error && <ErrorComponent />}
+            {(error || !result) && <ErrorComponent />}
           </div>
           <div className=" flex flex-row justify-center text-2xl">
             {result && <SuccessComponent />}
