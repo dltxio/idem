@@ -1,12 +1,26 @@
-
 const SuccessComponent = () => {
   return (
-    <div className=" justify-center box-content h-60 w-80 p-10 border-2">
-      <div className="text-center text-[#2AC200] pt-10">SUCCESS</div>
-      <div className="text-center text-white mt-5">
-        Your PGP key has been sucessfully verified by IDEM.
+    <>
+      <div className="alert alert-success shadow-lg">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="stroke-current flex-shrink-0 h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          <span>SUCCESS:</span>
+          <span>Your PGP key has been sucessfully verified by IDEM.</span>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 export default SuccessComponent;

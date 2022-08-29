@@ -36,20 +36,20 @@ const VerifyEmail = () => {
 	"
         style={{ backgroundImage: `url(${Background})` }}
       />
-      <div className=" relative justify-center min-w-500">
+      <div className=" relative justify-center">
         <Navbar />
 
-        <div className="relative justify-center py-20">
+        <div className="flex flex-col relative justify-center items-center py-20">
           {isVerifying && (
-            <div className="flex text-white text-5xl justify-center">
+            <div className="flex text-white text-5xl text-center justify-center mb-5">
               VERIFYING...
             </div>
           )}
-          <div className=" flex flex-row justify-center text-2xl">
-            {(error || !result) && <ErrorComponent />}
+          <div className="relative justify-center items-center text-center text-2xl w-2/3">
+            {(error || !result) && <SuccessComponent />}
           </div>
-          <div className=" flex flex-row justify-center text-2xl">
-            {result && <SuccessComponent />}
+          <div className="relative justify-center text-2xl w-2/3">
+            {error && <SuccessComponent />}
           </div>
         </div>
       </div>
