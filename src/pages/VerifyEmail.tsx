@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useApi } from "../hooks";
