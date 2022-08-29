@@ -46,7 +46,7 @@ const VerifyEmail = () => {
             </div>
           )}
           <div className="relative justify-center items-center text-center text-2xl w-2/3">
-            {(error || !result) && <SuccessComponent />}
+            {(error || !result) && <ErrorComponent />}
           </div>
           <div className="relative justify-center text-2xl w-2/3">
             {error && <SuccessComponent />}
