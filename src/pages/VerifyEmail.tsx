@@ -22,16 +22,21 @@ const VerifyEmail = () => {
       });
   }, []);
   return (
-    <div>
-      <div>Verify Email </div>
-      <div>Token : {token} </div>
-      <br />
-      <div>Status</div>
-      {isVerifying && <div>Verifying...</div>}
-      {result && <div>Result : {JSON.stringify(result)} </div>}
-      {error && <div>Error : {JSON.stringify(error)} </div>}
+    <div className="bg-black">
+      HEADER
+      {isVerifying && <div>VERIFYING...</div>}
+      {error && <ErrorComponent />}
+      {result && <SuccessComponent />}
     </div>
   );
+};
+
+const ErrorComponent = () => {
+  return <div>ERROR</div>;
+};
+
+const SuccessComponent = () => {
+  return <div>SUCCESS</div>;
 };
 
 export default VerifyEmail;
