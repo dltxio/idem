@@ -1,6 +1,6 @@
 const ErrorComponent = () => {
   return (
-    <>
+    <div className="relative justify-center items-center text-center text-2xl w-2/3">
       <div className="alert alert-error shadow-lg">
         <div>
           <svg
@@ -20,7 +20,7 @@ const ErrorComponent = () => {
           <span>IDEM was unable to verify your email! Please try again.</span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default ErrorComponent;

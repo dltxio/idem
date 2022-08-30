@@ -43,13 +43,9 @@ const VerifyEmail = () => {
               VERIFYING...
             </div>
           ) : error || !result ? (
-            <div className="relative justify-center items-center text-center text-2xl w-2/3">
-              <ErrorComponent />
-            </div>
+            <ErrorComponent />
           ) : (
-            <div className="relative justify-center text-2xl w-2/3">
-              <SuccessComponent />
-            </div>
+            <SuccessComponent />
           )}
         </div>
       </div>

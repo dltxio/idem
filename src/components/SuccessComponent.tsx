@@ -1,6 +1,6 @@
 const SuccessComponent = () => {
   return (
-    <>
+    <div className="relative justify-center items-center text-center text-2xl w-2/3">
       <div className="alert alert-success shadow-lg">
         <div>
           <svg
@@ -20,7 +20,7 @@ const SuccessComponent = () => {
           <span>Your PGP key has been sucessfully verified by IDEM.</span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default SuccessComponent;
