@@ -42,18 +42,15 @@ const VerifyEmail = () => {
             <div className="flex text-white text-5xl text-center justify-center mb-5">
               VERIFYING...
             </div>
+          ) : error || !result ? (
+            <div className="relative justify-center items-center text-center text-2xl w-2/3">
+              <ErrorComponent />
+            </div>
           ) : (
-            (
-              <div className="relative justify-center items-center text-center text-2xl w-2/3">
-                {(error || !result) && <ErrorComponent />}
-              </div>
-            ) || (
-              <div className="relative justify-center text-2xl w-2/3">
-                {error && <SuccessComponent />}
-              </div>
-            )
+            <div className="relative justify-center text-2xl w-2/3">
+              <SuccessComponent />
+            </div>
           )}
-          ;
         </div>
       </div>
     </>
