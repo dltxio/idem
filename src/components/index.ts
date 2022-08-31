@@ -5,3 +5,5 @@ export { default as About } from "./About";
 export { default as Loader } from "./Loader";
 export { default as Form } from "./Form";
 export { default as IdemPromoVideo } from "./IdemPromoVideo";
+export { default as SuccessComponent } from "./SuccessComponent";
+export { default as ErrorComponent } from "./ErrorComponent";

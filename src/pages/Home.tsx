@@ -3,7 +3,6 @@ import {
   Form as ContactLink,
   IdemPromoVideo as IdemVideo
 } from "../components";
-
 import Background from "../assets/Background.jpg";
 import testGroupQRCode from "../assets/testGroupQRCode.png";
 

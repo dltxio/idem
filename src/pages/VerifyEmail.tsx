@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
+import Background from "../assets/Background.jpg";
+import { Navbar, SuccessComponent, ErrorComponent } from "../components";
 import { useApi } from "../hooks";
 
 const VerifyEmail = () => {
@@ -26,15 +28,26 @@ const VerifyEmail = () => {
       });
   }, [token]);
   return (
-    <div>
-      <div>Verify Email </div>
-      <div>Token : {token} </div>
-      <br />
-      <div>Status</div>
-      {isVerifying && <div>Verifying...</div>}
-      {result && <div>Result : {JSON.stringify(result)} </div>}
-      {error && <div>Error : {JSON.stringify(error)} </div>}
-    </div>
+    <>
+      <div
+        className="fixed bg-cover	bg-black w-full h-full bg-gradient-to-b from-black to-black brightness-[0.2]"
+        style={{ backgroundImage: `url(${Background})` }}
+      />
+      <div className=" relative justify-center">
+        <Navbar />
+        <div className="flex flex-col relative justify-center items-center py-20">
+          {isVerifying ? (
+            <div className="flex text-white text-5xl text-center justify-center mb-5">
+              VERIFYING...
+            </div>
+          ) : error || !result ? (
+            <ErrorComponent />
+          ) : (
+            <SuccessComponent />
+          )}
+        </div>
+      </div>
+    </>
   );
 };
 
