@@ -1,9 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Background from "../assets/Background.jpg";
-import { Navbar } from "../components";
-import ErrorComponent from "../components/ErrorComponent";
-import SuccessComponent from "../components/SuccessComponent";
+import { Navbar, SuccessComponent, ErrorComponent } from "../components";
 import { useApi } from "../hooks";
 
 const VerifyEmail = () => {
